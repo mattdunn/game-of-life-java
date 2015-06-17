@@ -1,13 +1,15 @@
 package org.gol;
 
+import org.gol.Cell.State;
+
 public class Grid {
 	
 	Cell[][] cells= new Cell[4][4];
 	
-	public Grid() {
+	public Grid(State cellState) {
 		for (int i = 0; i < cells.length; i++) {
 			for (int j = 0; j < cells.length; j++) {
-				cells[i][j] = new Cell();
+				cells[i][j] = new Cell(cellState);
 			}
 		}
 	}
