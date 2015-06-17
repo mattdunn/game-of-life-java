@@ -9,7 +9,8 @@ public class Game {
 		grid= new Grid();
 	}
 
-	public Object getGrid() {
+	public Grid getGrid() {
 		return grid;
 	}
+
 }
