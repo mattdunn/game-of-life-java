@@ -15,10 +15,6 @@ Inside the docker container, this repositories files are shared under /app
 
 ## How to
 
-- provision docker container
-
-  `docker-compose up`
-
 - run Gradle tests inside Docker container
 
   `docker-compose run app test`
