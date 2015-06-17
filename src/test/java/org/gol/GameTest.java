@@ -7,7 +7,7 @@ public class GameTest {
     @Test
     public void runGame() {
         Game game = new Game();
-        assertEquals(true, false);
-        // https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html
+        game.generateInitialState();
+        assertNotNull(game.getGrid());
     }
 }
