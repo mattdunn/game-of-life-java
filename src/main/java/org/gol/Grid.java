@@ -22,4 +22,9 @@ public class Grid {
 	public Cell[][] getCells() {
 		return cells;
 	}
+
+	public void print(GridPrinter printer) {
+		printer.print(); 
+		
+	}
 }

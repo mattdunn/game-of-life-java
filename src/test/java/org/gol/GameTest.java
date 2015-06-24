@@ -1,6 +1,9 @@
 package org.gol;
 
 import org.junit.Test;
+
+import static org.mockito.Mockito.*;
+
 import static org.junit.Assert.*;
 
 public class GameTest {
@@ -53,5 +56,14 @@ public class GameTest {
 				assertTrue(col.isAlive());
 			}
 		}
+	}
+	
+	
+	@Test
+	public void shouldBeAbleToPrintGridToPrinter() {
+		game.generateInitialState(Cell.State.ALIVE);
+		GridPrinter printer = mock(GridPrinter.class);
+		game.getGrid().print(printer);
+		verify(printer).print();
 	}
 }
