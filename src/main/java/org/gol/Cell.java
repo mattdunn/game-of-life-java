@@ -19,5 +19,15 @@ public class Cell {
 	public boolean isAlive() {
 		return cellState == State.ALIVE;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof Cell && ((Cell)obj).cellState == cellState;
+	}
+	
+	@Override
+	public String toString() {
+		return cellState == State.ALIVE ? "*" : "-";
+	}
 
 }

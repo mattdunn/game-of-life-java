@@ -58,12 +58,10 @@ public class GameTest {
 		}
 	}
 	
-	
 	@Test
-	public void shouldBeAbleToPrintGridToPrinter() {
+	public void shouldJustPrintMyStuffSeriouslyIWantToGoHome() {
 		game.generateInitialState(Cell.State.ALIVE);
-		GridPrinter printer = mock(GridPrinter.class);
-		game.getGrid().print(printer);
-		verify(printer).print();
+		game.getGrid().print(new ConsolePrinter());
 	}
+
 }

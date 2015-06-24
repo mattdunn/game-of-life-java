@@ -2,5 +2,5 @@ package org.gol;
 
 public interface GridPrinter {
 
-	void print();
+	void print(Cell[][] cellsAlive);
 }

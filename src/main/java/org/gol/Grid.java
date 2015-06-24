@@ -24,7 +24,7 @@ public class Grid {
 	}
 
 	public void print(GridPrinter printer) {
-		printer.print(); 
+		printer.print(cells); 
 		
 	}
 }
