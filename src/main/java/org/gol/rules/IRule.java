@@ -6,5 +6,5 @@ import org.gol.Cell;
 
 public interface IRule {
 	
-	public boolean shouldIDie(Cell cell, Collection<Cell> neighbours);
+	public Action whatNext(Cell cell, Collection<Cell> neighbours);
 }

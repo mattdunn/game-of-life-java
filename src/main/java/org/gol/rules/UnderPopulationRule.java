@@ -8,9 +8,16 @@ import org.gol.Cell;
 public class UnderPopulationRule implements IRule{
 
 	@Override
-	public boolean shouldIDie(Cell cell, Collection<Cell> neighbours) {
-		Long countOfAliveNeighbours = neighbours.stream().filter((c) -> c.isAlive()).collect(Collectors.counting());		
-		return cell.isAlive() && countOfAliveNeighbours < 2;
+	public Action whatNext(Cell cell, Collection<Cell> neighbours) {
+		
+		if (cell.isAlive()) {
+			Long countOfAliveNeighbours = neighbours.stream().filter((c) -> c.isAlive()).collect(Collectors.counting());	
+			if (countOfAliveNeighbours < 2)
+			{
+				return Action.DIE;
+			}
+		}
+		return Action.NOTHING;
 	}
 
 }
