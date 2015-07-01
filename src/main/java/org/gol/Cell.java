@@ -1,13 +1,21 @@
 package org.gol;
 
-import org.gol.Cell.State;
-
 public class Cell {
-	
+
 	private State cellState;
 
-	enum State {ALIVE, DEAD};
-	
+	enum State {
+		ALIVE, DEAD
+	};
+
+	public static Cell ALIVE() {
+		return new Cell(State.ALIVE);
+	}
+
+	public static Cell DEAD() {
+		return new Cell(State.DEAD);
+	}
+
 	public Cell(State cellState) {
 		this.cellState = cellState;
 	}
@@ -19,12 +27,12 @@ public class Cell {
 	public boolean isAlive() {
 		return cellState == State.ALIVE;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		return obj instanceof Cell && ((Cell)obj).cellState == cellState;
+		return obj instanceof Cell && ((Cell) obj).cellState == cellState;
 	}
-	
+
 	@Override
 	public String toString() {
 		return cellState == State.ALIVE ? "*" : "-";
