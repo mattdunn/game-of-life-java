@@ -7,7 +7,7 @@ import org.gol.Cell;
 
 public class NeighboursGenerator {
 
-	public Collection<Cell> generateNeighboursWithNumberOfAliveCell(int aliveCells) {
+	public static Collection<Cell> generateNeighboursWithNumberOfAliveCell(int aliveCells) {
 		
 		int totalCells = 8;
 		

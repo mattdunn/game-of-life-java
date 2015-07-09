@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import org.gol.Cell;
 
-public class UnderPopulationRule implements IRule{
+public class UnderPopulationRule implements IRule {
 
 	@Override
 	public Action whatNext(Cell cell, Collection<Cell> neighbours) {
