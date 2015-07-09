@@ -1,17 +1,19 @@
 package org.gol;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
 import org.gol.rules.Action;
 import org.gol.rules.IRule;
 import org.gol.rules.UnderPopulationRule;
+import org.gol.util.NeighboursGenerator;
 import org.junit.Test;
 
 public class UnderPopulationRuleTest {
+
+	private static final NeighboursGenerator neighboursGenerator = new NeighboursGenerator();
 
 	@Test
 	public void givenAliveCellWithLessThanTwoNeighboursCellShouldDie() {
@@ -33,29 +35,14 @@ public class UnderPopulationRuleTest {
 	}
 
 	private Collection<Cell> generateNeighboursWithZeroAliveCells() {
-		return generateNeighboursWithNumberOfAliveCell(0);
+		return neighboursGenerator.generateNeighboursWithNumberOfAliveCell(0);
 	}
 	
 	private Collection<Cell> generateNeighboursWithOneAliveCell() {
-		return generateNeighboursWithNumberOfAliveCell(1);
+		return neighboursGenerator.generateNeighboursWithNumberOfAliveCell(1);
 	}
 	
 	private Collection<Cell> generateNeighboursWithTwoAliveCells() {
-		return generateNeighboursWithNumberOfAliveCell(2);
+		return neighboursGenerator.generateNeighboursWithNumberOfAliveCell(2);
 	}
-	
-	private Collection<Cell> generateNeighboursWithNumberOfAliveCell(int aliveCells) {
-		
-		int totalCells = 8;
-		
-		Collection<Cell> n = new ArrayList<Cell>();
-
-		for (int i = 0; i < totalCells; i++)
-		{
-			n.add((i < aliveCells) ? Cell.ALIVE() : Cell.DEAD()); 
-		}
-
-		return n;
-	}
-
 }
