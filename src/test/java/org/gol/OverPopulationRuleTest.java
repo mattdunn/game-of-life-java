@@ -1,9 +1,8 @@
 package org.gol;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.gol.util.NeighboursGenerator.generateNeighboursWithNumberOfAliveCell;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 import org.gol.rules.Action;

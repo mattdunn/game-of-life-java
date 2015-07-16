@@ -1,13 +1,11 @@
 package org.gol;
 
-import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.AdditionalMatchers;
-import org.mockito.Mockito;
 
 public class GridTest {
 
